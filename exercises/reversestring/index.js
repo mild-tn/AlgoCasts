@@ -8,8 +8,15 @@
 
 // third method
 function reverse(str) {
-  return str.split('').reduce((reversed, character) => character + reversed, '')
+  let reversed = '';
+  for (let character of str) {
+    reversed = character + reversed
+    debugger
+  }
+  return reversed
 }
+
+reverse('abcde')
 
 module.exports = reverse;
 
@@ -27,4 +34,9 @@ module.exports = reverse;
 //     reversed = character + reversed
 //   }
 //   return reversed
+// }
+
+// third method
+// function reverse(str) {
+//   return str.split('').reduce((reversed, character) => character + reversed, '')
 // }
