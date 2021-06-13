@@ -8,6 +8,23 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+function fib(n) {
+  let fibonacci = [0, 1, 1, 2]
+
+  if (n > fibonacci.length) {
+    const setLength = n - fibonacci.length
+    for (let i = 0; i <= setLength; i++) {
+      const lastFibonacci = fibonacci[fibonacci.length - 1]
+      const beforeLast = fibonacci[(fibonacci.length - 1) - 1]
+      fibonacci = [...fibonacci, beforeLast + lastFibonacci]
+    }
+  } else {
+    const lastFibonacci = fibonacci[fibonacci.length - 1]
+    const beforeLast = fibonacci[(fibonacci.length - 1) - 1]
+    fibonacci = [...fibonacci, beforeLast + lastFibonacci]
+  }
+
+  return fibonacci[n]
+}
 
 module.exports = fib;
