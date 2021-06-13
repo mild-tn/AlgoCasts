@@ -8,6 +8,21 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+class Queue {
+  constructor() {
+    this.queue = []
+  }
+
+  add = (number) => {
+    this.queue = [...this.queue, number]
+    return this.queue
+  }
+
+  remove = () => {
+    let remove = this.queue[0]
+    this.queue = this.queue.slice(1)
+    return remove
+  }
+}
 
 module.exports = Queue;

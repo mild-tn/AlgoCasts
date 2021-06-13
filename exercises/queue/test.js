@@ -8,6 +8,8 @@ test('can add elements to a queue', () => {
   const q = new Queue();
   expect(() => {
     q.add(1);
+    q.add(2);
+    q.add(3);
   }).not.toThrow();
 });
 
