@@ -8,17 +8,27 @@
 // Example:
 //   fib(4) === 3
 
+// with recursive
 function fib(n) {
-  let fibonacci = [0, 1]
-
-  for (let index = 2; index <= n; index++) {
-    const a = fibonacci[index - 1]
-    const b = fibonacci[index - 2]
-    
-    fibonacci = [...fibonacci, a + b]
+  if (n < 2) {
+    return n
   }
 
-  return fibonacci[n]
+  return fib(n - 1) + fib(n - 2)
 }
+
+// with for loop
+// function fib(n) {
+//   let fibonacci = [0, 1]
+
+//   for (let index = 2; index <= n; index++) {
+//     const a = fibonacci[index - 1]
+//     const b = fibonacci[index - 2]
+    
+//     fibonacci = [...fibonacci, a + b]
+//   }
+
+//   return fibonacci[n]
+// }
 
 module.exports = fib;
