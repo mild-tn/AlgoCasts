@@ -9,19 +9,13 @@
 //   fib(4) === 3
 
 function fib(n) {
-  let fibonacci = [0, 1, 1, 2]
+  let fibonacci = [0, 1]
 
-  if (n > fibonacci.length) {
-    const setLength = n - fibonacci.length
-    for (let i = 0; i <= setLength; i++) {
-      const lastFibonacci = fibonacci[fibonacci.length - 1]
-      const beforeLast = fibonacci[(fibonacci.length - 1) - 1]
-      fibonacci = [...fibonacci, beforeLast + lastFibonacci]
-    }
-  } else {
-    const lastFibonacci = fibonacci[fibonacci.length - 1]
-    const beforeLast = fibonacci[(fibonacci.length - 1) - 1]
-    fibonacci = [...fibonacci, beforeLast + lastFibonacci]
+  for (let index = 2; index <= n; index++) {
+    const a = fibonacci[index - 1]
+    const b = fibonacci[index - 2]
+    
+    fibonacci = [...fibonacci, a + b]
   }
 
   return fibonacci[n]
