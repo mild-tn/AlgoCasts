@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../SlidingWindow/DNASequence.ts"],
+  "sourcesContent": ["\nfunction findRepeatedSequences(s, k) {\n  let sizeS = s.length\n  let arr = [], indexS = 0\n  let start = 0, end = k\n  let mapDNA = {}, result = []\n\n  while (end <= sizeS) {\n    arr.push(s.substring(start, end))\n    start++\n    end++\n  }\n\n  for (let item of arr) {\n    if (!mapDNA[item]) {\n      mapDNA[item] = 1\n    } else {\n      result = [...result, item ]\n      mapDNA[item]++\n    }\n  }\n\n  console.log({...result})\n  return result\n}\n\nfindRepeatedSequences('AGACCCTAGAC', 3)"],
+  "mappings": ";;;;;;;;;;;;;;;;AACA,+BAA+B,GAAG,GAAG;AACnC,MAAI,QAAQ,EAAE;AACd,MAAI,MAAM,IAAI,SAAS;AACvB,MAAI,QAAQ,GAAG,MAAM;AACrB,MAAI,SAAS,IAAI,SAAS;AAE1B,SAAO,OAAO,OAAO;AACnB,QAAI,KAAK,EAAE,UAAU,OAAO;AAC5B;AACA;AAAA;AAGF,WAAS,QAAQ,KAAK;AACpB,QAAI,CAAC,OAAO,OAAO;AACjB,aAAO,QAAQ;AAAA,WACV;AACL,eAAS,CAAC,GAAG,QAAQ;AACrB,aAAO;AAAA;AAAA;AAIX,UAAQ,IAAI,mBAAI;AAChB,SAAO;AAAA;AAGT,sBAAsB,eAAe;",
+  "names": []
+}

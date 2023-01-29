@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../BigO/index.ts"],
+  "sourcesContent": ["// What is the Big O of the below function? (Hint, you may want to go line by line)\nfunction anotherFunChallenge(input) {\n  let a = 5; // O(1)\n  let b = 10; // O(1)\n  let c = 50; // O(1)\n  for (let i = 0; i < input; i++) {\n    let x = i + 1; // O(n)\n    let y = i + 2; // O(n)\n    let z = i + 3; // O(n)\n\n  }\n  for (let j = 0; j < input; j++) {\n    let p = j * 2; // O(n)\n    let q = j * 2; // O(n)\n  }\n  let whoAmI = \"I don't know\"; // O(1)\n}\n\n// Big O is O(4 + 5n) ?\n\n// check time performance\nlet t1 = performance.now()\n// dosomething\nlet t2 = performance.now()\n// resilt = t2-t1"],
+  "mappings": "AACA,6BAA6B,OAAO;AAClC,MAAI,IAAI;AACR,MAAI,IAAI;AACR,MAAI,IAAI;AACR,WAAS,IAAI,GAAG,IAAI,OAAO,KAAK;AAC9B,QAAI,IAAI,IAAI;AACZ,QAAI,IAAI,IAAI;AACZ,QAAI,IAAI,IAAI;AAAA;AAGd,WAAS,IAAI,GAAG,IAAI,OAAO,KAAK;AAC9B,QAAI,IAAI,IAAI;AACZ,QAAI,IAAI,IAAI;AAAA;AAEd,MAAI,SAAS;AAAA;AAMf,IAAI,KAAK,YAAY;AAErB,IAAI,KAAK,YAAY;",
+  "names": []
+}

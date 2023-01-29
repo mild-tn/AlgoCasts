@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../MergeInterval/interval.ts"],
+  "sourcesContent": ["class Interval {\n  constructor(start, end) {\n    this.start = start;\n    this.end = end;\n    this.closed = true; // the interval is closed by default\n\n    this.setClosed = function(closed) {\n      this.closed = closed;\n    };\n\n    this.formatInterval = function() {\n      return this.closed\n        ? \"[\" + this.start + \", \" + this.end + \"]\"\n        : \"(\" + this.start + \", \" + this.end + \")\";\n    };\n  }\n}\n\nexport { Interval }\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA,eAAe;AAAA,EACb,YAAY,OAAO,KAAK;AACtB,SAAK,QAAQ;AACb,SAAK,MAAM;AACX,SAAK,SAAS;AAEd,SAAK,YAAY,SAAS,QAAQ;AAChC,WAAK,SAAS;AAAA;AAGhB,SAAK,iBAAiB,WAAW;AAC/B,aAAO,KAAK,SACR,MAAM,KAAK,QAAQ,OAAO,KAAK,MAAM,MACrC,MAAM,KAAK,QAAQ,OAAO,KAAK,MAAM;AAAA;AAAA;AAAA;",
+  "names": []
+}

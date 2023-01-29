@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../TwoPointer/ValidPalindrome.ts"],
+  "sourcesContent": ["function isPalindrome(s) {\n  let p1 = 0, p2 = s.length - 1\n  let middle = p2 / 2\n\n  while (p1 <= p2) {\n    if (s[p1] !== s[p2]) {\n      return false\n    }\n    p1++\n    p2--\n  }\n\n\n  return true\n}\n\nconsole.log(isPalindrome(\"RACEACAR\"))"],
+  "mappings": "AAAA,sBAAsB,GAAG;AACvB,MAAI,KAAK,GAAG,KAAK,EAAE,SAAS;AAC5B,MAAI,SAAS,KAAK;AAElB,SAAO,MAAM,IAAI;AACf,QAAI,EAAE,QAAQ,EAAE,KAAK;AACnB,aAAO;AAAA;AAET;AACA;AAAA;AAIF,SAAO;AAAA;AAGT,QAAQ,IAAI,aAAa;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Array/exercise/ReverseStr.ts"],
+  "sourcesContent": ["// Create function to reverse string\n// Hi my name is Mild\n// dliM si eman ym iH\nfunction reverse(str){\n  let reverse = \"\"\n  if (!str || str.length < 2 || typeof string !== \"string\") {\n      return \"Hmmm that not good.\"\n  }\n  for (let item of str) {\n    reverse = item + reverse\n  }\n  return reverse\n}\n\nconsole.log(reverse('Hello'))"],
+  "mappings": "AAGA,iBAAiB,KAAI;AACnB,MAAI,WAAU;AACd,MAAI,CAAC,OAAO,IAAI,SAAS,KAAK,OAAO,WAAW,UAAU;AACtD,WAAO;AAAA;AAEX,WAAS,QAAQ,KAAK;AACpB,eAAU,OAAO;AAAA;AAEnB,SAAO;AAAA;AAGT,QAAQ,IAAI,QAAQ;",
+  "names": []
+}

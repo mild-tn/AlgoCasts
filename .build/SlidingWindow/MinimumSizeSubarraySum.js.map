@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../SlidingWindow/MinimumSizeSubarraySum.ts"],
+  "sourcesContent": ["function minSubArraylen(target, nums) {\n\n  let max = 0, maxIndex = 0\n  let sum = 0, sumIndex = []\n  let i = 0, j = 0\n  let start = 0, end = 0\n  \n  while (end <= nums.length) {\n    \n    if (nums[start] + nums[end]) {\n      \n    }\n  }\n\n  \n  return -1;\n}\n\nminSubArraylen(7, [2,3,1,2,4,3])\n// [4,3]"],
+  "mappings": "AAAA,wBAAwB,QAAQ,MAAM;AAEpC,MAAI,MAAM,GAAG,WAAW;AACxB,MAAI,MAAM,GAAG,WAAW;AACxB,MAAI,IAAI,GAAG,IAAI;AACf,MAAI,QAAQ,GAAG,MAAM;AAErB,SAAO,OAAO,KAAK,QAAQ;AAEzB,QAAI,KAAK,SAAS,KAAK,MAAM;AAAA;AAAA;AAM/B,SAAO;AAAA;AAGT,eAAe,GAAG,CAAC,GAAE,GAAE,GAAE,GAAE,GAAE;",
+  "names": []
+}

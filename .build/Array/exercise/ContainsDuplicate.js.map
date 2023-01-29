@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Array/exercise/ContainsDuplicate.ts"],
+  "sourcesContent": ["// Input: nums = [1,2,3,1]\n// Output: true\n//-----------------\n// Input: nums = [1,2,3,4]\n// Output: false\n//-----------------\n\nvar containsDuplicate = function(nums) {  \n  let countNums = {}\n\n  for (let item of nums) {\n    if (!countNums[item]) {\n      countNums[item] = 1\n    } else {\n      countNums[item] = countNums[item] + 1\n    }\n  }\n\n  for (let item in countNums) {\n    if (countNums[item] > 1) {\n      return true\n    }\n  }\n\n  return false\n};\n\nconsole.log(containsDuplicate([1,2,3,1]))\n\n// ---- This is a very genius !!!!!\n// var containsDuplicate = function(nums) {\n//   if(nums.length !== new Set(nums).size){\n//       return true\n//   }\n//   return false\n// };"],
+  "mappings": "AAOA,IAAI,oBAAoB,SAAS,MAAM;AACrC,MAAI,YAAY;AAEhB,WAAS,QAAQ,MAAM;AACrB,QAAI,CAAC,UAAU,OAAO;AACpB,gBAAU,QAAQ;AAAA,WACb;AACL,gBAAU,QAAQ,UAAU,QAAQ;AAAA;AAAA;AAIxC,WAAS,QAAQ,WAAW;AAC1B,QAAI,UAAU,QAAQ,GAAG;AACvB,aAAO;AAAA;AAAA;AAIX,SAAO;AAAA;AAGT,QAAQ,IAAI,kBAAkB,CAAC,GAAE,GAAE,GAAE;",
+  "names": []
+}

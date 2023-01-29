@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Array/exercise/MoveZero.ts"],
+  "sourcesContent": ["// Input: nums = [0,1,0,3,12]\n// Output: [1,3,12,0,0]\n\n\nfunction swap(data, a, b) {\n  let temp = data[a];\n  data[a] = data[b];\n  data[b] = temp;\n  return data\n}\n\nlet moveZeroes = function(nums) {\n  for (let lastNonZeroFoundAt = 0, cur = 0; cur < nums.length; cur++) {\n    if (nums[cur] !== 0) {\n      swap(nums, lastNonZeroFoundAt++, cur);\n    }\n  }\n  return nums\n};\n\nconsole.log(moveZeroes([0,1,0,3,12]))\n\n\n// let moveZeroes = function(nums) {\n//     let arrayNonZero = []\n//     let arrayZero = []\n    \n//     for (let item of nums) {\n//       if (item === 0) {\n//         arrayZero = [...arrayZero, item]\n//       } else {\n//         arrayNonZero = [...arrayNonZero, item]\n//       }\n//     }\n\n//     let mergeArray = [...arrayNonZero, ...arrayZero]\n//     for (let i in mergeArray) {\n//       nums[i] = mergeArray[i]\n//     }\n    \n//     return nums\n// };"],
+  "mappings": "AAIA,cAAc,MAAM,GAAG,GAAG;AACxB,MAAI,OAAO,KAAK;AAChB,OAAK,KAAK,KAAK;AACf,OAAK,KAAK;AACV,SAAO;AAAA;AAGT,IAAI,aAAa,SAAS,MAAM;AAC9B,WAAS,qBAAqB,GAAG,MAAM,GAAG,MAAM,KAAK,QAAQ,OAAO;AAClE,QAAI,KAAK,SAAS,GAAG;AACnB,WAAK,MAAM,sBAAsB;AAAA;AAAA;AAGrC,SAAO;AAAA;AAGT,QAAQ,IAAI,WAAW,CAAC,GAAE,GAAE,GAAE,GAAE;",
+  "names": []
+}

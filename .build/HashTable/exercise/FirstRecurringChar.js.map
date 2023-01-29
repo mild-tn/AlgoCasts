@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../HashTable/exercise/FirstRecurringChar.ts"],
+  "sourcesContent": ["let firstRecurringChar = (input) => {\n  let mapChar = {}\n  for (let item of input) {\n    if (!mapChar){\n      mapChar[item] = 1\n    } else {\n      return item\n    }\n  }\n}\n\nconsole.log(firstRecurringChar([2,5,1,2,3,5,1,4]));"],
+  "mappings": "AAAA,IAAI,qBAAqB,CAAC,UAAU;AAClC,MAAI,UAAU;AACd,WAAS,QAAQ,OAAO;AACtB,QAAI,CAAC,SAAQ;AACX,cAAQ,QAAQ;AAAA,WACX;AACL,aAAO;AAAA;AAAA;AAAA;AAKb,QAAQ,IAAI,mBAAmB,CAAC,GAAE,GAAE,GAAE,GAAE,GAAE,GAAE,GAAE;",
+  "names": []
+}

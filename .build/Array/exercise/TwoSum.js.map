@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Array/exercise/TwoSum.ts"],
+  "sourcesContent": ["function twoSum(nums, target) {\n  // let tempNums = nums;\n  // let sum = 0;\n\n  // for (let index in nums) {\n  //   for (let indexTemp in tempNums) {\n  //     if (index !== indexTemp) {\n  //       sum = tempNums[indexTemp] + nums[index];\n  //       if (sum === target) {\n  //         return [indexTemp, index];\n  //       }\n  //     }\n  //   }\n  // }\n\n  // for(let i = 0; i < nums.length; i++){\n  //     for(let j = i +1; j<nums.length;j++){\n  //         if(nums[i] + nums[j] === target) return [i, j]\n  //     }\n  // }\n\n  let i = 0\n  let j = 0\n\n  while (i < nums.length) {\n    j = i + 1\n    while (j < nums.length) {\n      if (nums[i] + nums[j] === target) return [i, j]   \n      j++\n    }\n    j = 0\n    i++\n  }\n};\n\nconsole.log(twoSum([3,2,4], 6))"],
+  "mappings": "AAAA,gBAAgB,MAAM,QAAQ;AAqB5B,MAAI,IAAI;AACR,MAAI,IAAI;AAER,SAAO,IAAI,KAAK,QAAQ;AACtB,QAAI,IAAI;AACR,WAAO,IAAI,KAAK,QAAQ;AACtB,UAAI,KAAK,KAAK,KAAK,OAAO;AAAQ,eAAO,CAAC,GAAG;AAC7C;AAAA;AAEF,QAAI;AACJ;AAAA;AAAA;AAEH;AAED,QAAQ,IAAI,OAAO,CAAC,GAAE,GAAE,IAAI;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../SlidingWindow/MinimunWindowSubsequence.ts"],
+  "sourcesContent": ["function minWindow(str1, str2) {\n  let sizeStr1 = str1.length,\n    sizeStr2 = str2.length;\n\n  let length = Infinity;\n  let indexS1 = 0,\n    indexS2 = 0,\n    minSubsequence = \"\";\n\n  while (indexS1 <= sizeStr1) {\n    if (str1[indexS1] === str2[indexS2]) {\n      indexS2++\n      if (indexS2 == sizeStr2) {\n        let start = indexS1, end = indexS1 + 1\n        indexS2--;\n        while (indexS2 >= 0) {\n          if (str1[start] == str2[indexS2]) indexS2 -= 1;\n          start -= 1;\n        }\n        start++;\n        if (end - start < length) {\n          length = end - start;\n          minSubsequence = str1.substring(start, end);\n        }\n      }\n    }\n    indexS1++\n  }\n\n  console.log(minSubsequence)\n  return minSubsequence\n}\n\nminWindow('azjskfztf', 'sz')"],
+  "mappings": "AAAA,mBAAmB,MAAM,MAAM;AAC7B,MAAI,WAAW,KAAK,QAClB,WAAW,KAAK;AAElB,MAAI,SAAS;AACb,MAAI,UAAU,GACZ,UAAU,GACV,iBAAiB;AAEnB,SAAO,WAAW,UAAU;AAC1B,QAAI,KAAK,aAAa,KAAK,UAAU;AACnC;AACA,UAAI,WAAW,UAAU;AACvB,YAAI,QAAQ,SAAS,MAAM,UAAU;AACrC;AACA,eAAO,WAAW,GAAG;AACnB,cAAI,KAAK,UAAU,KAAK;AAAU,uBAAW;AAC7C,mBAAS;AAAA;AAEX;AACA,YAAI,MAAM,QAAQ,QAAQ;AACxB,mBAAS,MAAM;AACf,2BAAiB,KAAK,UAAU,OAAO;AAAA;AAAA;AAAA;AAI7C;AAAA;AAGF,UAAQ,IAAI;AACZ,SAAO;AAAA;AAGT,UAAU,aAAa;",
+  "names": []
+}

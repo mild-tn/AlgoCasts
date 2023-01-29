@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../Graph/Queue.ts"],
+  "sourcesContent": ["\"use strict\";\n\nmodule.exports = class Queue {\n  constructor(mySize) {\n    this.items = []\n    this.size = mySize;\n    this.front = 0;\n    this.back = -1;\n  }\n\n  isFull() {\n    return this.items.length >= this.size;\n  }\n\n  isEmpty() {\n    return this.items.length == 0;\n  }\n\n  getFront() {\n    if (this.items.length != 0) {\n      return this.items[0];\n    } else {\n      console.log(\"No elements in the queue\");\n    }\n  }\n\n  enqueue(element) {\n    if (this.items.length >= this.size) {\n      console.log(\"Queue is full\");\n    } else {\n      this.items.push(element);\n    }\n  }\n\n  dequeue() {\n    if (this.items.length == 0) {\n      console.log(\"No elements\");\n    } else {\n      return this.items.shift();\n    }\n  }\n  \n}"],
+  "mappings": ";AAEA,OAAO,UAAU,YAAY;AAAA,EAC3B,YAAY,QAAQ;AAClB,SAAK,QAAQ;AACb,SAAK,OAAO;AACZ,SAAK,QAAQ;AACb,SAAK,OAAO;AAAA;AAAA,EAGd,SAAS;AACP,WAAO,KAAK,MAAM,UAAU,KAAK;AAAA;AAAA,EAGnC,UAAU;AACR,WAAO,KAAK,MAAM,UAAU;AAAA;AAAA,EAG9B,WAAW;AACT,QAAI,KAAK,MAAM,UAAU,GAAG;AAC1B,aAAO,KAAK,MAAM;AAAA,WACb;AACL,cAAQ,IAAI;AAAA;AAAA;AAAA,EAIhB,QAAQ,SAAS;AACf,QAAI,KAAK,MAAM,UAAU,KAAK,MAAM;AAClC,cAAQ,IAAI;AAAA,WACP;AACL,WAAK,MAAM,KAAK;AAAA;AAAA;AAAA,EAIpB,UAAU;AACR,QAAI,KAAK,MAAM,UAAU,GAAG;AAC1B,cAAQ,IAAI;AAAA,WACP;AACL,aAAO,KAAK,MAAM;AAAA;AAAA;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts"],
+  "sourcesContent": ["import { HashTable } from './HashTable/hashTable'\n\nconst myHashTable = new HashTable(5);\nmyHashTable.set('grapes', 10000)\nmyHashTable.set('apples', 9)\nmyHashTable.set('orange', 34)\nmyHashTable.set('orange', 3)\nconsole.log(myHashTable.keys())\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,uBAA0B;AAE1B,MAAM,cAAc,IAAI,2BAAU;AAClC,YAAY,IAAI,UAAU;AAC1B,YAAY,IAAI,UAAU;AAC1B,YAAY,IAAI,UAAU;AAC1B,YAAY,IAAI,UAAU;AAC1B,QAAQ,IAAI,YAAY;",
+  "names": []
+}

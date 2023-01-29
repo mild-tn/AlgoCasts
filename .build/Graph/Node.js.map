@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../Graph/Node.ts"],
+  "sourcesContent": ["\"use strict\";\nmodule.exports = class Node {\n  constructor(data) {\n    this.data = data;\n    this.nextElement = null;\n  }\n}"],
+  "mappings": ";AACA,OAAO,UAAU,WAAW;AAAA,EAC1B,YAAY,MAAM;AAChB,SAAK,OAAO;AACZ,SAAK,cAAc;AAAA;AAAA;",
+  "names": []
+}

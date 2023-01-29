@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../LinkedList/index.ts"],
+  "sourcesContent": ["// 10 -> 15 -> 16\nclass LinkedList {\n  constructor (value) {\n    this.head = {\n      value: value,\n      next: null\n    }\n    this.tail = this.head\n    this.length = 1\n  }\n\n  append (value) {\n    const newNode = {\n      value: value,\n      next: null\n    }\n    this.tail.next  = newNode\n    this.tail = newNode\n    this.length++\n    return this;\n  }\n\n  prepend (value) {\n    const newNode = {\n      value: value,\n      next: null\n    }\n    newNode.next = this.head\n    this.head = newNode\n    this.length++\n    return this\n  }\n}\n\nconst myLinkedList = new LinkedList(10)\n\nmyLinkedList.append(15)\nmyLinkedList.append(16)\nmyLinkedList.prepend(30)\nconsole.log(myLinkedList)"],
+  "mappings": "AACA,iBAAiB;AAAA,EACf,YAAa,OAAO;AAClB,SAAK,OAAO;AAAA,MACV;AAAA,MACA,MAAM;AAAA;AAER,SAAK,OAAO,KAAK;AACjB,SAAK,SAAS;AAAA;AAAA,EAGhB,OAAQ,OAAO;AACb,UAAM,UAAU;AAAA,MACd;AAAA,MACA,MAAM;AAAA;AAER,SAAK,KAAK,OAAQ;AAClB,SAAK,OAAO;AACZ,SAAK;AACL,WAAO;AAAA;AAAA,EAGT,QAAS,OAAO;AACd,UAAM,UAAU;AAAA,MACd;AAAA,MACA,MAAM;AAAA;AAER,YAAQ,OAAO,KAAK;AACpB,SAAK,OAAO;AACZ,SAAK;AACL,WAAO;AAAA;AAAA;AAIX,MAAM,eAAe,IAAI,WAAW;AAEpC,aAAa,OAAO;AACpB,aAAa,OAAO;AACpB,aAAa,QAAQ;AACrB,QAAQ,IAAI;",
+  "names": []
+}
