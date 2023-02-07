@@ -1,7 +1,7 @@
 const binarySearch = (nums, target) => {
-  let low = 0;
-  let high = nums.length - 1;
-  let mid = 0;
+  let low = 0,
+    high = nums.length - 1,
+    mid = 0;
 
   while (low <= high) {
     mid = Math.floor((low + high) / 2);
