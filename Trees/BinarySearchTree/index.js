@@ -38,6 +38,35 @@ class BinarySearchTree {
       this.preOrderPrint(currentNode.rightChild);
     }
   }
+
+  inOrderPrint(currentNode) {
+    if (currentNode) {
+      this.inOrderPrint(currentNode.leftChild);
+      console.log(currentNode.val);
+      this.inOrderPrint(currentNode.rightChild);
+    }
+  }
+
+  postOrderPrint(currentNode) {
+    if (currentNode) {
+      this.postOrderPrint(currentNode.leftChild);
+      this.postOrderPrint(currentNode.rightChild);
+      console.log(currentNode.val);
+    }
+  }
+
+  search(value) {
+    let currentNode = this.root;
+    while (currentNode && currentNode.val !== value) {
+      if (value < currentNode.val) {
+        currentNode = currentNode.leftChild;
+      } else {
+        currentNode = currentNode.rightChild;
+      }
+    }
+
+    return currentNode;
+  }
 }
 
 let BST = new BinarySearchTree(6);
@@ -67,14 +96,14 @@ console.log("", BST);
 console.log("========preOrderPrint()=========");
 BST.preOrderPrint(BST.root);
 
-// console.log("========inOrderPrint()=========");
-// BST.inOrderPrint(BST.root);
+console.log("========inOrderPrint()=========");
+BST.inOrderPrint(BST.root);
 
-// console.log("========postOrderPrint()=========");
-// BST.postOrderPrint(BST.root);
+console.log("========postOrderPrint()=========");
+BST.postOrderPrint(BST.root);
 
-// console.log("======== Search 8 =========");
-// console.log(BST.search(8));
+console.log("======== Search 8 =========");
+console.log(BST.search(8));
 // console.log(BST.search(11));
 // console.log(BST.search(12));
 

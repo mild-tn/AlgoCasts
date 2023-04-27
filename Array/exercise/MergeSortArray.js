@@ -1,32 +1,25 @@
 const mergeSortedArrays = (arr1, arr2) => {
-  let mergeSortedArrays = [],
-    current1 = arr1[0],
-    current2 = arr2[0],
+  let mergedArrays = [],
+    tempArr1 = arr1[0],
+    tempArr2 = arr2[0],
     i = 1,
     j = 1;
 
-  if (arr1.length === 0) {
-    return arr2;
-  }
-
-  if (arr2.length === 0) {
-    return arr1;
-  }
-  while (current1 || current2) {
-    if (current1 < current2) {
-      mergeSortedArrays.push(current1);
-      current1 = arr1[i];
+  while (tempArr1 || tempArr2) {
+    if (!tempArr2 || tempArr1 < tempArr2) {
+      mergedArrays.push(tempArr1);
+      tempArr1 = arr1[i];
       i++;
     } else {
-      mergeSortedArrays.push(current2);
-      current2 = arr2[j];
+      mergedArrays.push(tempArr2);
+      tempArr2 = arr2[j];
       j++;
     }
   }
 
-  return mergeSortedArrays;
+  return mergedArrays;
 };
 
-console.log(mergeSortedArrays([1, 3, 4, 5], [2, 6, 7, 8]));
-console.log(mergeSortedArrays([], [2, 6, 7, 8]));
-console.log(mergeSortedArrays([2, 6, 7, 8], []));
+console.log(mergeSortedArrays([1, 3, 4, 5, 3, 12], [2, 6, 7, 8, 9]));
+// console.log(mergeSortedArrays([], [2, 6, 7, 8]));
+// console.log(mergeSortedArrays([2, 6, 7, 8], []));

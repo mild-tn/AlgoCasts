@@ -1,14 +1,14 @@
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 20];
 
-function swap(arrays, index1, index2) {
+const swap = (arrays, index1, index2) => {
   let temp = arrays[index1];
   arrays[index1] = arrays[index2];
   arrays[index2] = temp;
-}
+};
 
-function indexOfMin(arrays, startIndex) {
-  let minIndex = startIndex;
-  let minValue = arrays[startIndex];
+const indexOfMinium = (arrays, index) => {
+  let minValue = arrays[index];
+  let minIndex = index;
 
   for (let i = minIndex + 1; i < arrays.length; i++) {
     if (arrays[i] < minValue) {
@@ -18,19 +18,16 @@ function indexOfMin(arrays, startIndex) {
   }
 
   return minIndex;
-}
+};
 
 function selectionSort(arrays) {
-  const length = arrays.length;
-
-  for (let i = 0; i < length; i++) {
-    let minIndex = indexOfMin(arrays, i);
-    swap(arrays, i, minIndex);
+  for (let i = 0; i < arrays.length; i++) {
+    let minIndex = indexOfMinium(arrays, i);
+    if (minIndex !== i) {
+      swap(arrays, minIndex, i);
+    }
   }
-
-  // return arrays[minIndex];
   return arrays;
 }
 
-// selectionSort(numbers);
 console.log(selectionSort(numbers));
